@@ -1,0 +1,132 @@
+.citySelectionBlock {
+  margin-top: 20px;
+  width: 100%;
+  height: 100vh;
+  font-weight: bold;
+}
+.container {
+  @apply flex flex-col items-center gap-2 relative;
+  max-width: 500px;
+  margin: 0 auto;
+  .input {
+    @apply relative;
+    width: 100%;
+    input {
+      @apply rounded-xl pl-10 text-xl;
+      width: 90%;
+      height: 30px;
+      background-color: #1c1c1e;
+      border: none;
+      color: white;
+    }
+    img {
+      @apply absolute;
+      top: 7px;
+      left: 8px;
+      height: 20px;
+    }
+  }
+}
+.settingsImg {
+  @apply absolute mr-5 cursor-pointer text-sm;
+  font-weight: bold;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  img {
+    width: 30px;
+    height: 30px;
+    transition: 0.5s;
+  }
+}
+.settingsImg:hover {
+  img {
+    width: 33px;
+    height: 33px;
+  }
+  div {
+    @apply text-xl;
+    margin-top: -5px;
+    transition: 0.5s;
+  }
+}
+.header {
+  @apply text-3xl;
+}
+.itemContainer {
+  @apply flex items-center gap-7 justify-center;
+  width: 100%;
+}
+.item {
+  @apply relative flex flex-col  cursor-pointer justify-between;
+  height: 100px;
+}
+.top {
+  @apply flex items-center justify-between pt-2 pl-3 z-10;
+}
+.topLeft {
+  @apply flex flex-col text-left;
+}
+.cityName {
+  @apply text-xl;
+}
+.bottom {
+  @apply flex items-center justify-between pl-3 pr-5 z-10;
+}
+.bottomRight {
+  @apply flex gap-2;
+}
+.currentWeather {
+  @apply text-left text-sm pb-2;
+  width: 200px;
+}
+.video {
+  width: 100%;
+  position: fixed;
+  height: 100vh;
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.videoItem {
+  @apply rounded-xl;
+  opacity: 0.8;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.citiesToFindBlock {
+  @apply rounded-md relative;
+  background: rgba(18, 14, 14, 0.1);
+  border-left: 0.1px solid gray;
+  border-right: 0.1px solid gray;
+  border-bottom: 0.1px solid gray;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(2px);
+  width: 90%;
+
+  .cityes {
+    @apply text-xl rounded-sm flex justify-between items-center p-3 cursor-pointer pl-7;
+    padding-right: 20px;
+    height: 50px;
+    border-bottom: 0.1px solid gray;
+  }
+}
+
+.cityes:hover {
+  background-color: #2e77bd;
+}
+.location {
+  @apply flex flex-col items-center text-sm;
+  width: 100px;
+}

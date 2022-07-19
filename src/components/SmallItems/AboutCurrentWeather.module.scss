@@ -1,0 +1,67 @@
+.aboutCurrentWeather {
+  @apply grid grid-cols-3 justify-center;
+  margin: 0 auto;
+  gap: 10px;
+  text-align: center;
+  grid-column-start: 7;
+  grid-column-end: 11;
+  @media (max-width: 1086px) {
+    @apply grid-cols-2;
+    grid-column-start: 8;
+  }
+  @media (max-width: 850px) {
+    @apply grid-cols-3;
+    grid-column-start: auto;
+    grid-column-end: auto;
+  }
+  @media (max-width: 380px) {
+    @apply grid-cols-2;
+  }
+}
+.currentWeatherInDetails {
+  @apply relative rounded-lg items-center  justify-center;
+  height: 150px;
+  max-width: 180px;
+  background: rgba(112, 128, 166, 0.2);
+  border: 0.5px solid gray;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
+}
+.wind {
+  @apply flex flex-col  items-center;
+  margin-top: 20px;
+  margin-right: 5px;
+}
+.item {
+  @apply flex flex-col items-center justify-between;
+
+  .value {
+    @apply text-3xl;
+    margin-top: 25px;
+    span {
+      @apply text-xl;
+    }
+  }
+}
+
+.header {
+  @apply flex flex-row items-center gap-2 pt-2  justify-center;
+  font-size: 12px;
+  width: 100%;
+  img {
+    height: 20px;
+    color: white;
+  }
+}
+.text {
+  font-size: 14px;
+  .precipicationPerDay {
+    @apply text-xs;
+  }
+  @media (max-width: 970px) and (min-width: 787px) {
+    @apply text-xs;
+    .precipicationPerDay {
+      font-size: 10px;
+    }
+  }
+}

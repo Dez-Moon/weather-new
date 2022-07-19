@@ -1,0 +1,32 @@
+.compassContainer {
+  @apply relative;
+  height: 100px;
+  margin-top: -13px;
+  margin-right: 97px;
+}
+.windSpeed {
+  @apply absolute flex flex-col text-center justify-center;
+  border-radius: 100px;
+  top: 33px;
+  right: -70.5px;
+  width: 37px;
+  height: 37px;
+  > div {
+    @apply text-xs;
+  }
+}
+.compass {
+  @apply relative;
+}
+.icon {
+  @apply absolute;
+  width: 100px;
+}
+.arrow {
+  @apply absolute;
+  top: -30px;
+  left: 25px;
+  height: 160px;
+  width: 50px;
+  transition: 5s;
+}

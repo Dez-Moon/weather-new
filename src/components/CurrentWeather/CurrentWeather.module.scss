@@ -1,0 +1,45 @@
+.wheatherNow {
+  @apply text-center text-3xl flex flex-col items-center;
+  width: 100%;
+}
+.temp {
+  @apply relative text-5xl;
+}
+.city {
+  display: flex;
+  justify-items: center;
+  margin-right: 10px;
+  :placeholder-shown {
+    @apply text-sm;
+  }
+}
+.city input {
+  @apply text-2xl;
+  background: none;
+  margin: 0 5px;
+  color: white;
+  text-align: center;
+  width: 200px;
+  border: none;
+  :active {
+    background: none;
+    border: none;
+  }
+}
+.citiesBlock {
+  @apply rounded-md absolute z-10;
+  overflow-y: scroll;
+  margin-top: 50px;
+  width: 360px;
+  background-color: #3b4b70;
+}
+
+.buttonUpdate:hover {
+  img {
+    height: 25px;
+    transition: 0.3s;
+  }
+}
+.text {
+  @apply text-xl;
+}

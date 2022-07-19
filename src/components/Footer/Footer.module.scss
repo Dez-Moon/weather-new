@@ -1,0 +1,77 @@
+.footer {
+  @apply fixed flex items-center justify-center;
+  width: 100%;
+  height: 40px;
+  bottom: 0;
+  border-radius: 5px 5px 0 0;
+  background: rgba(112, 128, 166, 0.2);
+  border-top: 0.5px solid gray;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
+  span {
+    cursor: pointer;
+    font-size: 25px;
+    margin: 20px;
+  }
+  .img {
+    @apply absolute cursor-pointer mr-8 flex items-center justify-center;
+    height: 0;
+    width: 0;
+    border-radius: 100px;
+    right: 0;
+    background: rgba(112, 128, 166, 0.2);
+    border-top: 0.5px solid gray;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
+    animation: jump 0.5s infinite alternate;
+    img {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+.dotContainer {
+  @apply flex gap-10;
+}
+.itemSelected {
+  @apply flex items-center justify-center;
+  height: 0;
+  width: 0;
+  color: white;
+  animation: shadow 1.5s infinite alternate;
+}
+.item {
+  @apply flex items-center justify-center;
+  height: 0;
+  width: 0;
+  color: #657d94;
+  animation: shadow 1.5s infinite alternate;
+}
+.switches {
+  @apply absolute flex;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  .switchToLeft {
+    width: 100%;
+  }
+  .switchToRight {
+    width: 100%;
+  }
+}
+
+@keyframes shadow {
+  from {
+    box-shadow: 0 100 0px 5px white;
+  }
+  to {
+    box-shadow: 0 0 20px 7px white;
+  }
+}
+@keyframes jump {
+  from {
+  }
+  to {
+    margin-top: -5px;
+  }
+}

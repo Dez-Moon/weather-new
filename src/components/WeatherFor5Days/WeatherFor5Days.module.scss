@@ -1,0 +1,55 @@
+.weatherFor5Days {
+  @apply relative rounded-lg;
+  background: rgba(112, 128, 166, 0.2);
+  border: 0.5px solid gray;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
+  min-height: 300px;
+  grid-column-start: 1;
+  grid-column-end: 7;
+  @media (max-width: 1086px) {
+    grid-column-end: 8;
+  }
+  @media (max-width: 850px) {
+    grid-column-start: auto;
+    grid-column-end: auto;
+  }
+}
+.oneDayContainer {
+  @apply flex flex-col justify-between pl-3 pr-3;
+  height: 92%;
+}
+.weatherForOneDay {
+  @apply flex items-center justify-between;
+  height: 100%;
+  border-top: 1px solid #2e77bd;
+  img {
+    width: 25px;
+  }
+}
+.header {
+  @apply flex items-center p-1 ml-1;
+  text-align: left;
+}
+.line {
+  font-size: 1em;
+  position: absolute;
+  bottom: -5.5px;
+  left: 0;
+  cursor: pointer;
+}
+.borderWrap {
+  width: 100px;
+  position: relative;
+  background: linear-gradient(to right, #3b4b70, green, orange, #3b4b70);
+  padding: 2px;
+  height: 2px;
+  border-radius: 100px;
+}
+.day {
+  @apply text-center;
+  width: 50px;
+}
+.calendarIcon {
+  width: 22px;
+}
